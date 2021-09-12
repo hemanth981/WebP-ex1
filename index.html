@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Webcoursera
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="homepage_styles.css">
+        <script src="index_js.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <ul class="navigation-bar" id='id1navig' onmouseout="hide_classes()">
+            <li>
+                <a href="index.html">
+                    <i class="glyphicon glyphicon-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="dropdown" onmouseover = "display_classes()" onclick="show_classes()">
+                    <span class = "menu_header" onmouseover = "display_classes()">
+                    <i class="glyphicon glyphicon-menu-hamburger" onmouseover = "display_classes()"></i>
+                    Classes
+                    </span>
+                    <!-- </a> -->
+            </li>
+            <li class="search-box">
+                <!-- <i class="glyphicon glyphicon-menu-hamburger search-box-icon1"></i> -->
+                <div class="inner-addon left-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="text" class="form-control" />
+                </div>
+                <!-- <input type="text" placeholder="Search.."> -->
+            </li>
+            <!-- Align to right -->
+            <li class="navbar-right">
+                <div class="user_access">
+                    <a onclick="document.getElementById('user_auth').style.display='block';document.getElementById('login_signup').innerHTML='Login';document.getElementById('id_is_signup').checked=false"><i class="glyphicon glyphicon-user"></i> Login</a>
+                    
+                    <a onclick="document.getElementById('user_auth').style.display='block';document.getElementById('login_signup').innerHTML='Sign Up';document.getElementById('id_is_signup').checked=true">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        Sign up
+                    </a>
+                </div>
+            </li>
+
+            <!-- Expand menu (For small screens) -->
+            <a href="javascript:void(0);" class="icon_hamburger" onclick="expand_navbar()">
+                <i class="glyphicon glyphicon-menu-hamburger"></i>
+            </a>
+        </ul>
+        <!-- Dropdown menu for classes -->
+        <div class="dropdown-content" onmouseover="display_classes()" onmouseout="hide_classes()">
+            <a href="ajax.html">Ajax</a>
+            <a href="css.html">CSS</a>
+            <a href="html.html">HTML</a>
+            <a href="java.html">Java</a>
+            <a href="python.html">Python</a>
+            <a href="javascript.html">Javascript</a>
+        </div>
+        
+        <!-- <iframe src="python.html" frameborder="1" width="300" height="300" title="frame"></iframe> -->
+        <h1>Welcome to Webcoursera</h1>
+        <i class="bi bi-caret-left-square"></i>
+        <p>
+        Your one stop destination for web development lessons ranging from HTML to Python.<br>
+        Select any subject from the dropdown menu above and begin expanding your knowledge right away!<br>
+        </p>
+        <!-- Login Form -->
+        <div id="user_auth" class="login_form">
+            <form class="login_form-content" action="" method="post">
+              <div class="imgcontainer">
+                <img src="static/img/nitc_logo.jpeg" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                Username
+                <input type="text" placeholder="Enter Username" name="username" required>
+                Password
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="checkbox" name="is_signup" id="id_is_signup"  hidden>
+                <button id="login_signup" type="submit" class="login_form_button">Login</button>
+        
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('user_auth').style.display='none'" class="cancelbtn login_form_button">Cancel</button>
+              </div>
+            </form>
+          </div>
+
+        <!-- Courses offered -->
+        <div id="courses">
+            <br>
+            <h2>Courses Offered</h2>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="ajax.html">
+                    <img src="static/img/Ajax.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">Lets learn AJAX</div>
+                  </a>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="css.html">
+                    <img src="static/img/css.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">CSS: From beginner to expert</div>
+                  </a>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="html.html">
+                    <img src="static/img/html.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">HTML full course</div>
+                  </a>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="java.html">
+                    <img src="static/img/java.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">Become a Java developer</div>
+                  </a>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="python.html">
+                    <img src="static/img/Python.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">Python programming fundamentals</div>
+                  </a>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="javascript.html">
+                    <img src="static/img/JS.png" alt="AJAX" width="600" height="400">
+                    <div class="desc">Introduction to Javascript</div>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="tooltip2">
+                Contact Us
+              <span class="tooltiptext"  style="width:200px;position: absolute;bottom:10px;right:10px">hemanth_b180318cs@nitc.ac.in<br>isaac_b180644cs@nitc.ac.in<br>rohith_b180291cs@nitc.ac.in</span>
+            </span>
+            <span class="tooltip2">
+                About us
+              <span class="tooltiptext"  style="width:200px;position: absolute;bottom:10px;right:10px">NITC WebP Exercise 1 Group</span>
+            </span>
+
+            <a href="privacy.html" style="color:white;padding-right:10px">
+                Privacy policy
+            </a>
+            <a href="terms_and_conditions.html" style="color:white;padding-right:10px">
+                Terms and Conditions
+            </a>
+        </div>
+    </body>
+    </html>

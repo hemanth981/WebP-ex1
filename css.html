@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Course: CSS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="homepage_styles.css">
+        <script src="index_js.js"></script>
+    </head>
+    <body>
+
+      <ul class="navigation-bar" id='id1navig' onmouseout="hide_classes()">
+        <li>
+            <a href="index.html">
+                <i class="glyphicon glyphicon-home"></i>
+                Home
+            </a>
+        </li>
+
+        <li class="dropdown" onmouseover = "display_classes()" onclick="show_classes()">
+            <!-- <a href="index.html"> -->
+                <span class = "menu_header" onmouseover = "display_classes()">
+                <i class="glyphicon glyphicon-menu-hamburger" onmouseover = "display_classes()"></i>
+                Classes
+                </span>
+                <!-- </a> -->
+        </li>
+        <li class="search-box">
+            <!-- <i class="glyphicon glyphicon-menu-hamburger search-box-icon1"></i> -->
+            <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="text" class="form-control" />
+            </div>
+            <!-- <input type="text" placeholder="Search.."> -->
+        </li>
+        <li class="navbar-right">
+            <div class="user_access">
+                <a onclick="document.getElementById('user_auth').style.display='block'"><i class="glyphicon glyphicon-user"></i> Login</a>
+                
+                <a href="about.asp">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                    Sign up
+                </a>
+            </div>
+        </li>
+        <a href="javascript:void(0);" class="icon_hamburger" onclick="expand_navbar()">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </a>
+        
+    </ul>
+    <div class="dropdown-content" onmouseover="display_classes()" onmouseout="hide_classes()">
+        <a href="ajax.html">Ajax</a>
+        <a href="css.html">CSS</a>
+        <a href="html.html">HTML</a>
+        <a href="java.html">Java</a>
+        <a href="python.html">Python</a>
+        <a href="javascript.html">Javascript</a>
+      </div>
+    <div class="video_length_filter">
+        <!-- <a class="active" href="#home">Home</a> -->
+        
+        <input type="checkbox" name="hello" onchange="length_filter(this, 1)" id="video_filter_s"> Small
+        <input type="checkbox" name="hello" onchange="length_filter(this, 1)" id="video_filter_m"> Medium
+        <input type="checkbox" name="hello" onchange="length_filter(this, 1)" id="video_filter_l"> Large
+        <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a> -->
+    </div>
+    <div id="videos">
+        <br>Course videos:<br>
+        <div class="responsive">
+            <div class="gallery">
+              <a class="course_video_item" onclick="play_video(this, 'https://www.youtube.com/embed/r1xBCi5SOjw')" vid_length=5>
+                <img src="http://img.youtube.com/vi/r1xBCi5SOjw/1.jpg" alt="CSS" style="width:100%">
+                <div class="desc">CSS Crash Course Tutorial (23m)</div>
+              </a>
+            </div>
+        </div>
+        <div class="responsive">
+          <div class="gallery">
+            <a onclick="play_video(this, 'https://www.youtube.com/embed/3_9znKVNe5g')" vid_length=70>
+              <img src="http://img.youtube.com/vi/3_9znKVNe5g/1.jpg" alt="CSS" style="width:100%">
+              <div class="desc">CSS Tutorial for Begineers (1h 4m)</div>
+            </a>
+          </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a onclick="play_video(this, 'https://www.youtube.com/embed/KN6oBEOz2ZI')" vid_length=123>
+            <img src="http://img.youtube.com/vi/KN6oBEOz2ZI/1.jpg" alt="CSS" style="width:100%">
+            <div class="desc">CSS Crash Course for Absolute Begineers (3h 19m)</div>
+          </a>
+        </div>
+    </div>        
+    </div>
+
+    <!-- </div> -->
+        <div id="player_complete" class="player_background" onclick="document.getElementById('player_complete').style.display='none'">
+          
+              <div class="video_player">
+                <button type="button" onclick="document.getElementById('player_complete').style.display='none'" class="player_close_button">X</button>
+                <iframe id="course_video" width=100% height=100% src="https://www.youtube.com/embed/zPHerhks2Vg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+                
+          </div>
+          <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>Reference<h4>
+            <a href="https://devdocs.io/css/">CSS Reference Material</a>
+            </div>
+
+            <div class="footer">
+                <span class="tooltip2">
+                    Contact Us
+                  <span class="tooltiptext"  style="width:200px;position: absolute;bottom:10px;right:10px">hemanth_b180318cs@nitc.ac.in<br>isaac_b180644cs@nitc.ac.in<br>rohith_b180291cs@nitc.ac.in</span>
+                </span>
+                <span class="tooltip2">
+                    About us
+                  <span class="tooltiptext"  style="width:200px;position: absolute;bottom:10px;right:10px">NITC WebP Exercise 1 Group</span>
+                </span>
+    
+                <a href="privacy.html" style="color:white;padding-right:10px">
+                    Privacy policy
+                </a>
+                <a href="terms_and_conditions.html" style="color:white;padding-right:10px">
+                    Terms and Conditions
+                </a>
+            </div>
+            <!-- Login Form -->
+        <div id="user_auth" class="login_form">
+  
+            <form class="login_form-content" action="" method="post">
+              <div class="imgcontainer">
+                <img src="static/img/nitc_logo.jpeg" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                Username
+                <input type="text" placeholder="Enter Username" name="username" required>
+                Password
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="checkbox" name="is_signup" id="id_is_signup"  hidden>
+                <button id="login_signup" type="submit" class="login_form_button">Login</button>
+        
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('user_auth').style.display='none'" class="cancelbtn login_form_button">Cancel</button>
+              </div>
+            </form>
+          </div>
+    </body>
+</html>

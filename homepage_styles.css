@@ -1,0 +1,434 @@
+body {
+  background-color: rgb(235, 235, 235);
+  font-family: cursive;
+}
+.navigation-bar {
+  /* align-items: top; */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgb(63, 63, 63);
+  position: sticky;
+  /* overflow: hidden; */
+  top: 0;
+  width:100%;
+  height: 48px;
+  border-radius: 3px;
+  }
+
+.navigation-bar a {
+
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+.navigation-bar li {
+    float: left;
+    transition: display 1s;
+
+  }
+
+
+/* Change the link color to #111 (black) on hover */
+.navigation-bar a:hover {
+    background-color: #111;
+    transition: backgroud-color 5s;
+    
+  }
+  
+  .navbar-right{
+    background-color: rgb(28, 152, 224);
+    float: right;
+    margin-right: 5px;
+  }
+  .navbar-right a{
+    background-color: rgb(28, 152, 224);
+    float: right;
+    transition: background-color 1s;
+  }
+  .navbar-right a:hover{
+    background-color: rgb(15, 100, 150);
+    cursor: pointer;
+    float: right;
+  }
+  .navigation-bar .icon_hamburger {
+    display: none;
+  }
+  @media screen and (max-width: 700px) {
+    .navigation-bar li:not(:nth-child(3),:first-child) {display: none;}
+    .navigation-bar a.icon_hamburger {
+      float: right;
+      /* position: fixed;
+      right: 0px; */
+      display: block;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .navigation-bar li:not(:first-child) {display: none;}
+  }
+  
+  @media screen and (max-width: 700px) {
+    .navigation-bar.responsive2 {position: relative;}
+    .navigation-bar.responsive2 .icon_hamburger {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navigation-bar.responsive2 li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navigation-bar.responsive2 li div a {
+      
+      /* background-color: aquamarine; */
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .user_access {
+      margin-top: 40px;
+    }
+  }
+/* Style the search box inside the navigation bar */
+.search-box {
+  padding-left: 10px;
+}
+.navigation-bar input[type=text] {
+  /* color: #111; */
+  background-color: #111;
+  float: left;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+  padding: 6px;
+  border: 1px solid;
+  margin-top: 5px;
+  margin-right: 16px;
+  padding-left: 30px;
+  font-size: 17px;
+}
+
+
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  color: aliceblue;
+  padding: 10px;
+  padding-top: 13px;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.footer {
+  margin-top: 100px;
+  height: 6%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(28, 152, 224);
+  color: white;
+  text-align: center;
+}
+.footer span {
+  padding: 10px;
+}
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip2 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+}
+
+html {
+  background-color: white;
+background-image: 'static/img/java.png';
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+  transition: background-color 1s;
+  margin-bottom: 30px;
+  /* margin: 1px; */
+}
+
+div.gallery:hover {
+  /* border: 1px solid #777; */
+  background-color: rgb(209, 209, 209);
+}
+
+div.gallery img {
+  /* width: 100%; */
+  /* height: auto; */
+  height: 200px;
+  width: 100%;
+  /* background-color: rgb(206, 206, 206);
+  */
+  background-image: linear-gradient(rgb(160, 160, 160), rgb(235, 235, 235));
+  object-fit: contain;
+  border-radius: 0.5ch;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* LOGIN FORM CSS */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+     float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+/* body {font-family: Arial, Helvetica, sans-serif;} */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Set a style for all buttons */
+.login_form_button {
+  background-color: #1589be;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.login_form_button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #ad160b;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  width: 100%;
+}
+
+
+.login_form {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.login_form-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+  
+}
+
+/* Video Player for the course content */
+.player_close_button {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #00000062;
+  border: none;
+  color: rgba(199, 199, 199, 0.726);
+  border-radius: 100px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transition: background-color 1s;
+}
+.player_close_button:hover {
+  background-color: #0000008e;
+  cursor: pointer;
+}
+.player_background {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.video_player {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  /* left:50%; */
+  
+}
+
+
+
+.menu_header {
+  width: 160px;
+  /* height: 50px; */
+  padding-left : 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+  color: white;
+  /* margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px; */
+  /* background-color: #ad160b; */
+}
+/* Filters for videos */
+.dropdown {
+  display: inline;
+  /* background-color: #f1f1f1; */
+}
+/* .dropdown:hover .dropdown-content {
+  background-color: #1589be;
+  left: 0px;
+  z-index: 1;
+} */
+
+#video_filter_s {
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  /* display: inline-block; */
+  margin-left: 50px;
+  display: none;
+  position: fixed;
+  /* background-color: #f9f9f9; */
+  /* min-width: 160px; */
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: rgba(68, 154, 212, 0.945);
+  border-radius: 5px;
+}
+.dropdown-content a {
+  display: inline-block;
+  text-decoration: none;
+  /* float: left; */
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  /* margin-top: 10px; */
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  /* margin-top: 10px; */
+  /* background-color: #888; */
+}
+.dropdown-content a:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.icon_hamburger{
+  color: white;
+}
+
+/* 
+
+
+  } */
